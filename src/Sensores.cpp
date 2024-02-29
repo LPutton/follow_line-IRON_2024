@@ -8,7 +8,7 @@ void Sensores::initSensors(){
 }
 
 void Sensores::setSensorsPins(){
-    borda.setSensorPins((const uint8_t[]){PB10, PB12, PA8},qtd_borda); //Definição dos pinos dos sensores de borda (direita esquerda, nessa ordem)
+    borda.setSensorPins((const uint8_t[]){PB11, PA8},qtd_borda); //Definição dos pinos dos sensores de borda (direita esquerda, nessa ordem)
     sensores.setSensorPins((const uint8_t[]){ PA6, PA5, PA4, PA3, PA0, PB1}, qtd_sensores); //Definição dos pinos dos sensores frontais, da ESQUERDA PARA DIREITA (lembra que eu observei a Top Layer, ou seja, PA0 = S1)
 }
 

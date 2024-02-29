@@ -135,7 +135,7 @@ float PID(float erro){
 }
 
 void marcacoes_laterais(){
-    if((sensor.valores_borda[0] <= 1500 ) && sensor.valores_borda[2] >= 500 && millis()-tempo_anterior2 >= 300){
+    if((sensor.valores_borda[0] <= 1500 ) &&  millis()-tempo_anterior2 >= 300){
         marcacao_esquerda++;
         digitalWrite(LED1, HIGH);
         delay(20);
@@ -143,7 +143,7 @@ void marcacoes_laterais(){
         tempo_anterior2 = millis();
     }
     
-    if(sensor.valores_borda[2] <= 500 && (sensor.valores_borda[0] >= 1500) && millis()-tempo_anterior >= 300){
+    if((sensor.valores_borda[0] >= 1500) && millis()-tempo_anterior >= 300){
         tempo_anterior = millis();
         marcacao_direita++;
         digitalWrite(LED1, HIGH);
